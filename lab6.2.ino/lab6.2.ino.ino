@@ -1,14 +1,16 @@
+int scores[5] = {45, 55, 60, 95, 98};
+
 void setup() {
-    Serial.begin(115200);
-    int score[5] = {80, 75, 90, 85, 70};
-    int sum = 0;
-    float average;
-    for (int i = 0; i < 5; i++) {
-        sum += score[i];
-    }
-    average = sum / 5.0;
-    Serial.print("Average = ");
-    Serial.println(average);
+  Serial.begin(115200);
+  int sum = 0;
+  for (int i = 0; i < 5; i++) {
+    sum += scores[i];
+  }
+  float average = (float)sum / 5;
+  Serial.print("Total: ");
+  Serial.println(sum);
+  Serial.print("Average: ");
+  Serial.println(average);
 }
 
 void loop() {
